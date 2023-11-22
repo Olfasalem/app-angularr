@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+    <h1>Module App component</h1>
+    <p>Application de gestion d'appareils</p>
+<hr>
+<h2>Mes appareils</h2>
+<ul class="list-group">
+
+  <app-my-appareil [name]="a.name" [status]="a.statut"*ngFor="let a of appareilList"></app-my-appareil>
+
+
+
+
+<!----
+  <app-my-appareil name="machine alaver" status="Eteindre"></app-my-appareil>
+  <app-my-appareil name="Tv" status="Allumer"></app-my-appareil>
+  <app-my-appareil name="PC" status="Eteindre"></app-my-appareil>
+  <app-my-appareil name="climatiseur" status="Allumer"></app-my-appareil> -->
+ 
+
+</ul>
+<br>
+<button class="btn btn-success" [disabled]="!isAuth" (click)="onAllumer()">Allumer tout</button> &nbsp;
+<button class="btn btn-danger" disabled>Eteindre tout</button> &nbsp;
+<br><br>
+
+  </div>
+</div>
+</div>
